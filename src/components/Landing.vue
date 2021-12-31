@@ -1,4 +1,5 @@
 <script setup>
+import Slider from "./Slider.vue";
 defineProps({
   msg: String,
 });
@@ -290,14 +291,7 @@ const filler = new URL("../assets/images/filler.jpeg", import.meta.url).href;
       </button>
     </div>
   </section>
-  <section>
-    <div
-      class="h-screen bg-cover bg-center bg-no-repeat -mt-24 flex"
-      :style="{
-        backgroundImage: `url(${filler})`,
-      }"
-    ></div>
-  </section>
+  <Slider />
   <section class="text-white body-font bg-slate-800">
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col text-center w-full mb-20">
@@ -502,5 +496,3 @@ const filler = new URL("../assets/images/filler.jpeg", import.meta.url).href;
     </div>
   </section>
 </template>
-
-<style scoped></style>
