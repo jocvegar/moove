@@ -107,7 +107,7 @@
                       v-for="item in solutions"
                       @click="accept(close)"
                       :key="item.name"
-                      :href="item.href"
+                      :to="item.href"
                       class="
                         -m-3
                         p-3
@@ -119,7 +119,7 @@
                     >
                       <component
                         :is="item.icon"
-                        class="flex-shrink-0 h-6 w-6 text-red-700"
+                        class="flex-shrink-0 h-6 w-6 text-slate-700"
                         aria-hidden="true"
                       />
                       <div class="ml-4">
@@ -162,7 +162,7 @@
                       >
                         <component
                           :is="item.icon"
-                          class="flex-shrink-0 h-6 w-6 text-gray-400"
+                          class="flex-shrink-0 h-6 w-6 text-slate-700"
                           aria-hidden="true"
                         />
                         <span class="ml-3">{{ item.name }}</span>
@@ -261,7 +261,7 @@
                     >
                       <component
                         :is="item.icon"
-                        class="flex-shrink-0 h-6 w-6 text-red-700"
+                        class="flex-shrink-0 h-6 w-6 text-slate-700"
                         aria-hidden="true"
                       />
                       <div class="ml-4">
@@ -306,14 +306,6 @@
                         </li>
                       </ul>
                     </div>
-                    <div class="mt-5 text-sm">
-                      <a
-                        href="#"
-                        class="font-medium text-red-700 hover:text-red-900"
-                      >
-                        View all posts <span aria-hidden="true">&rarr;</span></a
-                      >
-                    </div>
                   </div>
                 </div>
               </PopoverPanel>
@@ -357,6 +349,7 @@
       leave-from-class="opacity-100 scale-100"
       leave-to-class="opacity-0 scale-95"
     >
+      <!-- breakpoint -->
       <PopoverPanel
         focus
         class="
@@ -375,17 +368,16 @@
             rounded-lg
             shadow-lg
             ring-1 ring-black ring-opacity-5
-            bg-white
-            divide-y-2 divide-gray-50
+            bg-slate-900
           "
         >
           <div class="pt-5 pb-6 px-5">
             <div class="flex items-center justify-between">
               <div>
                 <img
-                  class="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                  alt="Workflow"
+                  class="h-12 w-auto animate-spin"
+                  src="../assets/images/isowhite.png"
+                  alt="moove"
                 />
               </div>
               <div class="-mr-2">
@@ -420,7 +412,7 @@
                 >
                   <component
                     :is="item.icon"
-                    class="flex-shrink-0 h-6 w-6 text-red-700"
+                    class="flex-shrink-0 h-6 w-6 text-slate-700"
                     aria-hidden="true"
                   />
                   <span class="ml-3 text-xl font-medium text-slate-300">
@@ -432,19 +424,6 @@
           </div>
           <div class="py-6 px-5 space-y-6">
             <div class="grid grid-cols-2 gap-y-4 gap-x-8">
-              <a
-                href="#"
-                class="text-xl font-medium text-slate-300 hover:text-gray-700"
-              >
-                Pricing
-              </a>
-
-              <a
-                href="#"
-                class="text-xl font-medium text-slate-300 hover:text-gray-700"
-              >
-                Docs
-              </a>
               <a
                 v-for="item in resources"
                 :key="item.name"
@@ -470,19 +449,12 @@
                   text-xl
                   font-medium
                   text-white
-                  bg-red-700
+                  bg-slate-800
                   hover:bg-slate-900
                 "
               >
-                Sign up
+                Contact Us
               </a>
-              <p class="mt-6 text-center text-xl font-medium text-white">
-                Existing customer?
-                {{ " " }}
-                <a href="#" class="text-red-700 hover:text-red-900">
-                  Sign in
-                </a>
-              </p>
             </div>
           </div>
         </div>
