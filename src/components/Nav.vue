@@ -1,12 +1,15 @@
 <template>
-  <Popover class="relative bg-transparent">
+  <Popover
+    class="sticky top-0 z-10"
+    :class="scrollPosition > 80 ? 'bg-slate-800' : 'bg-transparent'"
+  >
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div
         class="
           flex
           justify-between
           items-center
-          py-6
+          py-2
           md:justify-start md:space-x-10
         "
       >
@@ -14,9 +17,9 @@
           <a href="#">
             <span class="sr-only">Workflow</span>
             <img
-              class="h-8 w-auto sm:h-10"
-              src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-              alt=""
+              class="h-10 w-auto sm:h-16"
+              src="../assets/images/moove-logo-white.png"
+              alt="moove"
             />
           </a>
         </div>
@@ -34,7 +37,7 @@
               focus:outline-none
               focus:ring-2
               focus:ring-inset
-              focus:ring-indigo-500
+              focus:ring-slate-500
             "
           >
             <span class="sr-only">Open menu</span>
@@ -45,8 +48,8 @@
           <Popover class="relative" v-slot="{ open }">
             <PopoverButton
               :class="[
-                open ? 'text-gray-900' : 'text-white',
-                'group bg-transparent rounded-md inline-flex items-center text-xl font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500',
+                open ? 'text-slate-300' : 'text-white',
+                'group bg-transparent rounded-md inline-flex items-center text-xl font-medium hover:text-slate-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-500 hover:scale-125 ease-in-out duration-150',
               ]"
             >
               <span>Solutions</span>
@@ -102,6 +105,7 @@
                   >
                     <a
                       v-for="item in solutions"
+                      @click="accept(close)"
                       :key="item.name"
                       :href="item.href"
                       class="
@@ -119,7 +123,7 @@
                         aria-hidden="true"
                       />
                       <div class="ml-4">
-                        <p class="text-xl font-medium text-gray-900">
+                        <p class="text-xl font-medium text-slate-300">
                           {{ item.name }}
                         </p>
                         <p class="mt-1 text-sm text-grey-500">
@@ -152,7 +156,7 @@
                           rounded-md
                           text-xl
                           font-medium
-                          text-gray-900
+                          text-slate-300
                           hover:bg-gray-100
                         "
                       >
@@ -172,22 +176,23 @@
 
           <a
             href="#"
-            class="text-xl font-medium text-white hover:text-gray-900"
+            class="
+              text-xl
+              font-medium
+              text-white
+              hover:text-slate-300 hover:scale-125
+              ease-in-out
+              duration-150
+            "
           >
             Pricing
-          </a>
-          <a
-            href="#"
-            class="text-xl font-medium text-white hover:text-gray-900"
-          >
-            Docs
           </a>
 
           <Popover class="relative" v-slot="{ open }">
             <PopoverButton
               :class="[
-                open ? 'text-gray-900' : 'text-white',
-                'group bg-transparent rounded-md inline-flex items-center text-xl font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500',
+                open ? 'text-slate-300' : 'text-white',
+                'group bg-transparent rounded-md inline-flex items-center text-xl font-medium hover:text-slate-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-500 hover:scale-125                 duration-300',
               ]"
             >
               <span>More</span>
@@ -260,7 +265,7 @@
                         aria-hidden="true"
                       />
                       <div class="ml-4">
-                        <p class="text-xl font-medium text-gray-900">
+                        <p class="text-xl font-medium text-slate-300">
                           {{ item.name }}
                         </p>
                         <p class="mt-1 text-sm text-gray-500">
@@ -292,7 +297,7 @@
                             :href="post.href"
                             class="
                               font-medium
-                              text-gray-900
+                              text-slate-300
                               hover:text-gray-700
                             "
                           >
@@ -319,18 +324,6 @@
           <a
             href="#"
             class="
-              whitespace-nowrap
-              text-xl
-              font-medium
-              text-white
-              hover:text-gray-900
-            "
-          >
-            Sign in
-          </a>
-          <a
-            href="#"
-            class="
               ml-8
               whitespace-nowrap
               inline-flex
@@ -343,12 +336,14 @@
               shadow-sm
               text-xl
               font-medium
-              text-white
-              bg-red-700
-              hover:bg-red-900
+            "
+            :class="
+              scrollPosition > 80
+                ? 'text-slate-800 bg-white hover:bg-slate-200'
+                : 'text-white bg-slate-800 hover:bg-slate-900'
             "
           >
-            Sign up
+            Contact Us
           </a>
         </div>
       </div>
@@ -407,7 +402,7 @@
                     focus:outline-none
                     focus:ring-2
                     focus:ring-inset
-                    focus:ring-indigo-500
+                    focus:ring-slate-500
                   "
                 >
                   <span class="sr-only">Close menu</span>
@@ -428,7 +423,7 @@
                     class="flex-shrink-0 h-6 w-6 text-red-700"
                     aria-hidden="true"
                   />
-                  <span class="ml-3 text-xl font-medium text-gray-900">
+                  <span class="ml-3 text-xl font-medium text-slate-300">
                     {{ item.name }}
                   </span>
                 </a>
@@ -439,14 +434,14 @@
             <div class="grid grid-cols-2 gap-y-4 gap-x-8">
               <a
                 href="#"
-                class="text-xl font-medium text-gray-900 hover:text-gray-700"
+                class="text-xl font-medium text-slate-300 hover:text-gray-700"
               >
                 Pricing
               </a>
 
               <a
                 href="#"
-                class="text-xl font-medium text-gray-900 hover:text-gray-700"
+                class="text-xl font-medium text-slate-300 hover:text-gray-700"
               >
                 Docs
               </a>
@@ -454,7 +449,7 @@
                 v-for="item in resources"
                 :key="item.name"
                 :href="item.href"
-                class="text-xl font-medium text-gray-900 hover:text-gray-700"
+                class="text-xl font-medium text-slate-300 hover:text-gray-700"
               >
                 {{ item.name }}
               </a>
@@ -476,7 +471,7 @@
                   font-medium
                   text-white
                   bg-red-700
-                  hover:bg-red-900
+                  hover:bg-slate-900
                 "
               >
                 Sign up
@@ -496,7 +491,7 @@
   </Popover>
 </template>
 
-<script>
+<script setup>
 import {
   Popover,
   PopoverButton,
@@ -518,6 +513,7 @@ import {
   XIcon,
 } from "@heroicons/vue/outline";
 import { ChevronDownIcon } from "@heroicons/vue/solid";
+import { ref, onMounted, onUnmounted } from "vue";
 
 const solutions = [
   {
@@ -596,23 +592,20 @@ const recentPosts = [
   { id: 3, name: "Improve your customer experience", href: "#" },
 ];
 
-export default {
-  components: {
-    Popover,
-    PopoverButton,
-    PopoverGroup,
-    PopoverPanel,
-    ChevronDownIcon,
-    MenuIcon,
-    XIcon,
-  },
-  setup() {
-    return {
-      solutions,
-      callsToAction,
-      resources,
-      recentPosts,
-    };
-  },
-};
+let scrollPosition = ref(0);
+
+function updateScroll() {
+  scrollPosition.value = window.scrollY;
+}
+
+function accept(close) {
+  close();
+}
+
+onMounted(() => {
+  window.addEventListener("scroll", updateScroll);
+});
+onUnmounted(() => {
+  window.removeEventListener("scroll", updateScroll);
+});
 </script>

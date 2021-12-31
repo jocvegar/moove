@@ -4,6 +4,7 @@ defineProps({
 });
 
 const hero = new URL("../assets/images/hero.jpeg", import.meta.url).href;
+const filler = new URL("../assets/images/filler.jpeg", import.meta.url).href;
 </script>
 
 <template>
@@ -33,31 +34,43 @@ const hero = new URL("../assets/images/hero.jpeg", import.meta.url).href;
                 title-font
                 sm:text-4xl
                 text-3xl
-                mb-4
+                mb-16
                 font-medium
                 text-white
               "
+              data-aos="zoom-in"
+              data-aos-easing="ease-in-out"
             >
               Microdosing synth tattooed vexillologist
             </h1>
-            <p class="mb-8 leading-relaxed">
+            <p
+              class="mb-8 leading-relaxed"
+              data-aos="fade-up"
+              data-aos-easing="ease"
+              data-aos-delay="400"
+            >
               Meggings kinfolk echo park stumptown DIY, kale chips beard
               jianbing tousled. Chambray dreamcatcher trust fund, kitsch vice
               godard disrupt ramps hexagon mustache umami snackwave tilde
               chillwave ugh. Pour-over meditation PBR&amp;B pickled ennui celiac
               mlkshk freegan photo booth af fingerstache pitchfork.
             </p>
-            <div class="flex justify-center">
+            <div
+              class="flex justify-center"
+              data-aos="fade-up"
+              data-aos-easing="ease"
+              data-aos-delay="600"
+            >
               <button
                 class="
                   inline-flex
                   text-white
-                  bg-red-700
+                  bg-slate-800
                   border-0
                   py-2
                   px-6
                   focus:outline-none
-                  hover:bg-red-900
+                  hover:bg-slate-900
                   rounded
                   text-lg
                 "
@@ -87,12 +100,12 @@ const hero = new URL("../assets/images/hero.jpeg", import.meta.url).href;
       </div>
     </section>
   </div>
-  <section class="text-white body-font">
+  <section class="text-white body-font mb-20">
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col text-center w-full mb-20">
         <h2
           class="
-            text-xs text-red-700
+            text-xs text-slate-800
             tracking-widest
             font-medium
             title-font
@@ -103,6 +116,9 @@ const hero = new URL("../assets/images/hero.jpeg", import.meta.url).href;
         </h2>
         <h1
           class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900"
+          data-aos="fade-down"
+          data-aos-easing="ease"
+          data-aos-delay="400"
         >
           Master Cleanse Reliac Heirloom
         </h1>
@@ -133,7 +149,7 @@ const hero = new URL("../assets/images/hero.jpeg", import.meta.url).href;
             Fingerstache flexitarian street art 8-bit waistcoat. Distillery
             hexagon disrupt edison bulbche.
           </p>
-          <a class="text-red-700 inline-flex items-center"
+          <a class="text-slate-800 inline-flex items-center"
             >Learn More
             <svg
               fill="none"
@@ -167,8 +183,8 @@ const hero = new URL("../assets/images/hero.jpeg", import.meta.url).href;
             Fingerstache flexitarian street art 8-bit waistcoat. Distillery
             hexagon disrupt edison bulbche.
           </p>
-          <a class="text-red-700 inline-flex items-center"
-            >Learn More
+          <a class="text-slate-800 inline-flex items-center">
+            Learn More
             <svg
               fill="none"
               stroke="currentColor"
@@ -201,7 +217,7 @@ const hero = new URL("../assets/images/hero.jpeg", import.meta.url).href;
             Fingerstache flexitarian street art 8-bit waistcoat. Distillery
             hexagon disrupt edison bulbche.
           </p>
-          <a class="text-red-700 inline-flex items-center"
+          <a class="text-slate-800 inline-flex items-center"
             >Learn More
             <svg
               fill="none"
@@ -235,7 +251,7 @@ const hero = new URL("../assets/images/hero.jpeg", import.meta.url).href;
             Fingerstache flexitarian street art 8-bit waistcoat. Distillery
             hexagon disrupt edison bulbche.
           </p>
-          <a class="text-red-700 inline-flex items-center"
+          <a class="text-slate-800 inline-flex items-center"
             >Learn More
             <svg
               fill="none"
@@ -257,25 +273,39 @@ const hero = new URL("../assets/images/hero.jpeg", import.meta.url).href;
           mx-auto
           mt-16
           text-white
-          bg-red-700
+          bg-slate-800
           border-0
           py-2
           px-8
           focus:outline-none
-          hover:bg-red-900
+          hover:bg-slate-900
           rounded
           text-lg
         "
+        data-aos="fade-up"
+        data-aos-easing="ease"
+        data-aos-delay="400"
       >
         Button
       </button>
     </div>
   </section>
-  <section class="text-white body-font bg-red-700">
+  <section>
+    <div
+      class="h-screen bg-cover bg-center bg-no-repeat -mt-24 flex"
+      :style="{
+        backgroundImage: `url(${filler})`,
+      }"
+    ></div>
+  </section>
+  <section class="text-white body-font bg-slate-800">
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col text-center w-full mb-20">
         <h1
-          class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900"
+          class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-400"
+          data-aos="fade-down"
+          data-aos-easing="ease"
+          data-aos-delay="400"
         >
           Our Team
         </h1>
@@ -286,7 +316,7 @@ const hero = new URL("../assets/images/hero.jpeg", import.meta.url).href;
         </p>
       </div>
       <div class="flex flex-wrap -m-2">
-        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+        <div class="p-2 lg:w-1/3 md:w-1/2 w-full" data-aos="flip-up">
           <div
             class="
               h-full
@@ -318,7 +348,7 @@ const hero = new URL("../assets/images/hero.jpeg", import.meta.url).href;
             </div>
           </div>
         </div>
-        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+        <div class="p-2 lg:w-1/3 md:w-1/2 w-full" data-aos="flip-up">
           <div
             class="
               h-full
@@ -348,7 +378,7 @@ const hero = new URL("../assets/images/hero.jpeg", import.meta.url).href;
             </div>
           </div>
         </div>
-        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+        <div class="p-2 lg:w-1/3 md:w-1/2 w-full" data-aos="flip-up">
           <div
             class="
               h-full
@@ -378,7 +408,7 @@ const hero = new URL("../assets/images/hero.jpeg", import.meta.url).href;
             </div>
           </div>
         </div>
-        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+        <div class="p-2 lg:w-1/3 md:w-1/2 w-full" data-aos="flip-up">
           <div
             class="
               h-full
@@ -408,7 +438,7 @@ const hero = new URL("../assets/images/hero.jpeg", import.meta.url).href;
             </div>
           </div>
         </div>
-        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+        <div class="p-2 lg:w-1/3 md:w-1/2 w-full" data-aos="flip-up">
           <div
             class="
               h-full
@@ -438,7 +468,7 @@ const hero = new URL("../assets/images/hero.jpeg", import.meta.url).href;
             </div>
           </div>
         </div>
-        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+        <div class="p-2 lg:w-1/3 md:w-1/2 w-full" data-aos="flip-up">
           <div
             class="
               h-full
@@ -465,100 +495,6 @@ const hero = new URL("../assets/images/hero.jpeg", import.meta.url).href;
             <div class="flex-grow">
               <h2 class="text-gray-900 title-font font-medium">Boris Kitua</h2>
               <p class="text-gray-100">UX Researcher</p>
-            </div>
-          </div>
-        </div>
-        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-          <div
-            class="
-              h-full
-              flex
-              items-center
-              border-gray-200 border
-              p-4
-              rounded-lg
-            "
-          >
-            <img
-              alt="team"
-              class="
-                w-16
-                h-16
-                bg-gray-100
-                object-cover object-center
-                flex-shrink-0
-                rounded-full
-                mr-4
-              "
-              src="https://dummyimage.com/100x90"
-            />
-            <div class="flex-grow">
-              <h2 class="text-gray-900 title-font font-medium">
-                Atticus Finch
-              </h2>
-              <p class="text-gray-100">QA Engineer</p>
-            </div>
-          </div>
-        </div>
-        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-          <div
-            class="
-              h-full
-              flex
-              items-center
-              border-gray-200 border
-              p-4
-              rounded-lg
-            "
-          >
-            <img
-              alt="team"
-              class="
-                w-16
-                h-16
-                bg-gray-100
-                object-cover object-center
-                flex-shrink-0
-                rounded-full
-                mr-4
-              "
-              src="https://dummyimage.com/104x94"
-            />
-            <div class="flex-grow">
-              <h2 class="text-gray-900 title-font font-medium">Alper Kamu</h2>
-              <p class="text-gray-100">System</p>
-            </div>
-          </div>
-        </div>
-        <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-          <div
-            class="
-              h-full
-              flex
-              items-center
-              border-gray-200 border
-              p-4
-              rounded-lg
-            "
-          >
-            <img
-              alt="team"
-              class="
-                w-16
-                h-16
-                bg-gray-100
-                object-cover object-center
-                flex-shrink-0
-                rounded-full
-                mr-4
-              "
-              src="https://dummyimage.com/108x98"
-            />
-            <div class="flex-grow">
-              <h2 class="text-gray-900 title-font font-medium">
-                Rodrigo Monchi
-              </h2>
-              <p class="text-gray-100">Product Manager</p>
             </div>
           </div>
         </div>

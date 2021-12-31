@@ -14,21 +14,16 @@
           text-gray-900
         "
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          class="w-10 h-10 text-white p-2 bg-red-700 rounded-full"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
-          ></path>
-        </svg>
-        <span class="ml-3 text-xl">Tailblocks</span>
+        <img
+          class="h-10 w-auto sm:h-16 animate-spin"
+          src="../assets/images/isoblack.png"
+          alt="moove"
+        />
+        <img
+          class="h-8 w-auto"
+          src="../assets/images/letterblack.png"
+          alt="moove"
+        />
       </a>
       <p
         class="
@@ -37,14 +32,7 @@
           mt-4
         "
       >
-        © 2020 Tailblocks —
-        <a
-          href="https://twitter.com/knyttneve"
-          class="text-gray-600 ml-1"
-          rel="noopener noreferrer"
-          target="_blank"
-          >@knyttneve</a
-        >
+        © {{ new Date().getFullYear() }} Move with us
       </p>
       <span
         class="
