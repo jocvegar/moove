@@ -15,7 +15,8 @@
       >
         <div class="flex justify-start lg:w-0 lg:flex-1">
           <a href="#">
-            <span class="sr-only">Workflow</span>
+            <span class="sr-only">Moove</span>
+
             <img
               class="h-10 w-auto sm:h-16"
               src="../assets/images/moove-logo-white.png"
@@ -373,10 +374,15 @@
         >
           <div class="pt-5 pb-6 px-5">
             <div class="flex items-center justify-between">
-              <div>
+              <div class="flex items-center">
                 <img
                   class="h-12 w-auto animate-spin"
                   src="../assets/images/isowhite.png"
+                  alt="moove"
+                />
+                <img
+                  class="h-8 w-auto"
+                  src="../assets/images/letterwhite.png"
                   alt="moove"
                 />
               </div>
