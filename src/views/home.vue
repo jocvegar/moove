@@ -9,5 +9,5 @@ import Landing from "../components/Landing.vue";
 </script>
 
 <template>
-  <Landing msg="Hello Vue 3 + Vite" />
+  <Landing />
 </template>

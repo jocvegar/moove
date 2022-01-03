@@ -1,11 +1,9 @@
 <script setup>
 import Slider from "./Slider.vue";
-defineProps({
-  msg: String,
-});
+import DarkButton from "./utilities/DarkButton.vue";
+import LightButton from "./utilities/LightButton.vue";
 
 const hero = new URL("../assets/images/hero.jpeg", import.meta.url).href;
-const filler = new URL("../assets/images/filler.jpeg", import.meta.url).href;
 </script>
 
 <template>
@@ -62,47 +60,21 @@ const filler = new URL("../assets/images/filler.jpeg", import.meta.url).href;
               data-aos-easing="ease"
               data-aos-delay="600"
             >
-              <button
-                class="
-                  inline-flex
-                  text-white
-                  bg-slate-800
-                  border-0
-                  py-2
-                  px-6
-                  focus:outline-none
-                  hover:bg-slate-900
-                  rounded
-                  text-lg
-                "
+              <dark-button>Button 1</dark-button>
+              <light-button
+                @navigate="() => $router.push('/about')"
+                class="ml-4"
               >
-                Button
-              </button>
-              <button
-                class="
-                  ml-4
-                  inline-flex
-                  text-gray-700
-                  bg-gray-100
-                  border-0
-                  py-2
-                  px-6
-                  focus:outline-none
-                  hover:bg-gray-200
-                  rounded
-                  text-lg
-                "
-              >
-                Button
-              </button>
+                Button 2
+              </light-button>
             </div>
           </div>
         </div>
       </div>
     </section>
   </div>
-  <section class="text-white body-font mb-20">
-    <div class="container px-5 py-24 mx-auto">
+  <section class="text-white body-font mb-12">
+    <div class="container px-5 py-20 mx-auto">
       <div class="flex flex-col text-center w-full mb-20">
         <h2
           class="
@@ -268,27 +240,16 @@ const filler = new URL("../assets/images/filler.jpeg", import.meta.url).href;
           </a>
         </div>
       </div>
-      <button
-        class="
-          flex
-          mx-auto
-          mt-16
-          text-white
-          bg-slate-800
-          border-0
-          py-2
-          px-8
-          focus:outline-none
-          hover:bg-slate-900
-          rounded
-          text-lg
-        "
-        data-aos="fade-up"
-        data-aos-easing="ease"
-        data-aos-delay="400"
-      >
-        Button
-      </button>
+      <div class="flex">
+        <dark-button
+          class="flex mx-auto mt-16"
+          data-aos="fade-up"
+          data-aos-easing="ease"
+          data-aos-delay="200"
+        >
+          Button 3
+        </dark-button>
+      </div>
     </div>
   </section>
   <Slider />

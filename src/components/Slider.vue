@@ -4,16 +4,16 @@ import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
 const slides = [
   {
-    title: "Esta, New Orleans",
+    title: "Esta, NOLA",
     image: new URL("../assets/images/filler.jpeg", import.meta.url).href,
+  },
+  {
+    title: "Ninfle, BR",
+    image: new URL("../assets/images/filler3.jpeg", import.meta.url).href,
   },
   {
     title: "Aquella, Miami",
     image: new URL("../assets/images/filler2.jpeg", import.meta.url).href,
-  },
-  {
-    title: "Ninfle, Baton Rouge",
-    image: new URL("../assets/images/filler3.jpeg", import.meta.url).href,
   },
 ];
 </script>
