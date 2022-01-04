@@ -11,10 +11,6 @@ const slides = [
     title: "Ninfle, BR",
     image: new URL("../assets/images/filler3.jpeg", import.meta.url).href,
   },
-  {
-    title: "Aquella, Miami",
-    image: new URL("../assets/images/filler2.jpeg", import.meta.url).href,
-  },
 ];
 </script>
 <template>
