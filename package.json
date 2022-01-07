@@ -1,6 +1,8 @@
 {
   "name": "moove",
   "version": "0.0.1",
+  "description": "Move with us",
+  "author": "Jose Vega",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

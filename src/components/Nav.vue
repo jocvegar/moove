@@ -5,13 +5,7 @@
   >
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div
-        class="
-          flex
-          justify-between
-          items-center
-          py-2
-          md:justify-start md:space-x-10
-        "
+        class="flex justify-between items-center py-2 md:justify-start md:space-x-10"
       >
         <div class="flex justify-start lg:w-0 lg:flex-1">
           <a href="#">
@@ -26,20 +20,7 @@
         </div>
         <div class="-mr-2 -my-2 md:hidden">
           <PopoverButton
-            class="
-              bg-white
-              rounded-md
-              p-2
-              inline-flex
-              items-center
-              justify-center
-              text-gray-400
-              hover:text-white hover:bg-gray-100
-              focus:outline-none
-              focus:ring-2
-              focus:ring-inset
-              focus:ring-slate-500
-            "
+            class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-slate-500"
           >
             <span class="sr-only">Open menu</span>
             <MenuIcon class="h-6 w-6" aria-hidden="true" />
@@ -72,51 +53,20 @@
               leave-to-class="opacity-0 translate-y-1"
             >
               <PopoverPanel
-                class="
-                  absolute
-                  z-10
-                  -ml-4
-                  mt-3
-                  transform
-                  px-2
-                  w-screen
-                  max-w-md
-                  sm:px-0
-                  lg:ml-0 lg:left-1/2 lg:-translate-x-1/2
-                "
+                class="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
               >
                 <div
-                  class="
-                    rounded-lg
-                    shadow-lg
-                    ring-1 ring-black ring-opacity-5
-                    overflow-hidden
-                  "
+                  class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden"
                 >
                   <div
-                    class="
-                      relative
-                      grid
-                      gap-6
-                      bg-white
-                      px-5
-                      py-6
-                      sm:gap-8 sm:p-8
-                    "
+                    class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8"
                   >
                     <a
                       v-for="item in solutions"
                       @click="accept(close)"
                       :key="item.name"
                       :to="item.href"
-                      class="
-                        -m-3
-                        p-3
-                        flex
-                        items-start
-                        rounded-lg
-                        hover:bg-gray-50
-                      "
+                      class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                     >
                       <component
                         :is="item.icon"
@@ -134,13 +84,7 @@
                     </a>
                   </div>
                   <div
-                    class="
-                      px-5
-                      py-5
-                      bg-gray-50
-                      space-y-6
-                      sm:flex sm:space-y-0 sm:space-x-10 sm:px-8
-                    "
+                    class="px-5 py-5 bg-gray-50 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8"
                   >
                     <div
                       v-for="item in callsToAction"
@@ -149,17 +93,7 @@
                     >
                       <a
                         :href="item.href"
-                        class="
-                          -m-3
-                          p-3
-                          flex
-                          items-center
-                          rounded-md
-                          text-xl
-                          font-medium
-                          text-slate-300
-                          hover:bg-gray-100
-                        "
+                        class="-m-3 p-3 flex items-center rounded-md text-xl font-medium text-slate-300 hover:bg-gray-100"
                       >
                         <component
                           :is="item.icon"
@@ -177,14 +111,7 @@
 
           <a
             href="#"
-            class="
-              text-xl
-              font-medium
-              text-white
-              hover:text-slate-300 hover:scale-125
-              ease-in-out
-              duration-150
-            "
+            class="text-xl font-medium text-white hover:text-slate-300 hover:scale-125 ease-in-out duration-150"
           >
             Pricing
           </a>
@@ -215,50 +142,19 @@
               leave-to-class="opacity-0 translate-y-1"
             >
               <PopoverPanel
-                class="
-                  absolute
-                  z-10
-                  left-1/2
-                  transform
-                  -translate-x-1/2
-                  mt-3
-                  px-2
-                  w-screen
-                  max-w-md
-                  sm:px-0
-                "
+                class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0"
               >
                 <div
-                  class="
-                    rounded-lg
-                    shadow-lg
-                    ring-1 ring-black ring-opacity-5
-                    overflow-hidden
-                  "
+                  class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden"
                 >
                   <div
-                    class="
-                      relative
-                      grid
-                      gap-6
-                      bg-white
-                      px-5
-                      py-6
-                      sm:gap-8 sm:p-8
-                    "
+                    class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8"
                   >
                     <a
                       v-for="item in resources"
                       :key="item.name"
                       :href="item.href"
-                      class="
-                        -m-3
-                        p-3
-                        flex
-                        items-start
-                        rounded-lg
-                        hover:bg-gray-50
-                      "
+                      class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
                     >
                       <component
                         :is="item.icon"
@@ -278,13 +174,7 @@
                   <div class="px-5 py-5 bg-gray-50 sm:px-8 sm:py-8">
                     <div>
                       <h3
-                        class="
-                          text-sm
-                          tracking-wide
-                          font-medium
-                          text-white
-                          uppercase
-                        "
+                        class="text-sm tracking-wide font-medium text-white uppercase"
                       >
                         Recent Posts
                       </h3>
@@ -296,11 +186,7 @@
                         >
                           <a
                             :href="post.href"
-                            class="
-                              font-medium
-                              text-slate-300
-                              hover:text-gray-700
-                            "
+                            class="font-medium text-slate-300 hover:text-gray-700"
                           >
                             {{ post.name }}
                           </a>
@@ -315,21 +201,8 @@
         </PopoverGroup>
         <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
           <a
-            href="#"
-            class="
-              ml-8
-              whitespace-nowrap
-              inline-flex
-              items-center
-              justify-center
-              px-4
-              py-2
-              border border-transparent
-              rounded-md
-              shadow-sm
-              text-xl
-              font-medium
-            "
+            @click="goToElement('contact-us')"
+            class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-xl font-medium"
             :class="
               scrollPosition > 80
                 ? 'text-slate-800 bg-white hover:bg-slate-200'
@@ -352,25 +225,12 @@
     >
       <!-- breakpoint -->
       <PopoverPanel
+        v-slot="{ close }"
         focus
-        class="
-          absolute
-          top-0
-          inset-x-0
-          p-2
-          transition
-          transform
-          origin-top-right
-          md:hidden
-        "
+        class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
       >
         <div
-          class="
-            rounded-lg
-            shadow-lg
-            ring-1 ring-black ring-opacity-5
-            bg-slate-900
-          "
+          class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-slate-900"
         >
           <div class="pt-5 pb-6 px-5">
             <div class="flex items-center justify-between">
@@ -388,20 +248,7 @@
               </div>
               <div class="-mr-2">
                 <PopoverButton
-                  class="
-                    bg-white
-                    rounded-md
-                    p-2
-                    inline-flex
-                    items-center
-                    justify-center
-                    text-gray-400
-                    hover:text-white hover:bg-gray-100
-                    focus:outline-none
-                    focus:ring-2
-                    focus:ring-inset
-                    focus:ring-slate-500
-                  "
+                  class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-slate-500"
                 >
                   <span class="sr-only">Close menu</span>
                   <XIcon class="h-6 w-6" aria-hidden="true" />
@@ -441,23 +288,8 @@
             </div>
             <div>
               <a
-                href="#"
-                class="
-                  w-full
-                  flex
-                  items-center
-                  justify-center
-                  px-4
-                  py-2
-                  border border-transparent
-                  rounded-md
-                  shadow-sm
-                  text-xl
-                  font-medium
-                  text-white
-                  bg-slate-800
-                  hover:bg-slate-900
-                "
+                @click="accept(close), goToElement('contact-us')"
+                class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-xl font-medium text-white bg-slate-800 hover:bg-slate-900"
               >
                 Contact Us
               </a>
@@ -578,6 +410,11 @@ function updateScroll() {
 
 function accept(close) {
   close();
+}
+
+function goToElement(element) {
+  let target = document.getElementById(element);
+  target.scrollIntoView({ behavior: "smooth" });
 }
 
 onMounted(() => {
