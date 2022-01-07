@@ -8,9 +8,8 @@
         class="flex justify-between items-center py-2 md:justify-start md:space-x-10"
       >
         <div class="flex justify-start lg:w-0 lg:flex-1">
-          <a href="#">
+          <a @click="handleMainNav()">
             <span class="sr-only">Moove</span>
-
             <img
               class="h-10 w-auto sm:h-16"
               src="../assets/images/moove-logo-white.png"
@@ -324,6 +323,7 @@ import {
 } from "@heroicons/vue/outline";
 import { ChevronDownIcon } from "@heroicons/vue/solid";
 import { ref, onMounted, onUnmounted } from "vue";
+import { useRouter, useRoute } from "vue-router";
 
 const solutions = [
   {
@@ -423,4 +423,23 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener("scroll", updateScroll);
 });
+
+const route = useRoute();
+const router = useRouter();
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+}
+
+function handleMainNav() {
+  if (route.path === "/") {
+    scrollToTop();
+  } else {
+    router.push("/");
+  }
+}
 </script>

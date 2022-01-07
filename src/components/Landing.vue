@@ -52,7 +52,12 @@ function goToElement(element) {
               <dark-button @navigate="goToElement('contact-us')">
                 Contact Us
               </dark-button>
-              <light-button class="ml-4"> Button 2 </light-button>
+              <light-button
+                @navigate="() => $router.push('/about')"
+                class="ml-4"
+              >
+                Button 2
+              </light-button>
             </div>
           </div>
         </div>
